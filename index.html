@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebPIQ — Bulk JPG/PNG/HEIC to WebP Converter, 100% Private</title>
+<meta name="description" content="Convert dozens of photos to WebP in your browser — nothing uploaded. Built for resellers and online sellers who need fast, marketplace-sized product photos.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark">WebP<span class="brand-accent">IQ</span></span>
+    </div>
+    <a class="header-cta" href="#converter">Start converting</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Bulk-convert product photos to WebP.<br>Nothing ever leaves your device.</h1>
+    <p class="hero-sub">Drop in your phone photos — JPG, PNG, or HEIC — and get lean, marketplace-ready WebP files back in seconds. Free for up to 20 images at a time.</p>
+    <div class="hero-badges">
+      <span class="badge">🔒 100% private, runs in your browser</span>
+      <span class="badge">⚡ No upload, no account</span>
+      <span class="badge">📦 Batch + ZIP download</span>
+    </div>
+  </div>
+</section>
+
+<section class="converter" id="converter">
+  <div class="wrap">
+
+    <div id="dropzone" class="dropzone">
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/heic,image/heif,.heic,.heif,.jpg,.jpeg,.png" hidden>
+      <div class="dropzone-inner">
+        <div class="dropzone-icon">📸</div>
+        <p class="dropzone-title">Drag photos here, or <button type="button" id="browseBtn" class="link-btn">browse files</button></p>
+        <p class="dropzone-hint">JPG · PNG · HEIC (iPhone) — up to 20 images free</p>
+      </div>
+    </div>
+
+    <div id="controls" class="controls hidden">
+      <div class="control-group">
+        <label for="qualitySlider">Quality <span id="qualityValue">80</span>%</label>
+        <input type="range" id="qualitySlider" min="1" max="100" value="80">
+      </div>
+      <div class="control-group control-group-resize">
+        <label>Resize (optional)</label>
+        <div class="resize-inputs">
+          <input type="number" id="maxWidth" placeholder="Max width (px)" min="1">
+          <span class="resize-x">×</span>
+          <input type="number" id="maxHeight" placeholder="Max height (px)" min="1">
+        </div>
+      </div>
+      <div class="control-group control-group-actions">
+        <button id="downloadZipBtn" class="btn btn-primary" disabled>Download all as ZIP</button>
+        <button id="clearAllBtn" class="btn btn-ghost">Clear all</button>
+      </div>
+    </div>
+
+    <div id="summary" class="summary hidden"></div>
+
+    <div id="fileList" class="file-list"></div>
+
+    <div id="limitNotice" class="limit-notice hidden">
+      <p>You've hit the free-batch limit of 20 images. Unlimited batches, marketplace presets, EXIF stripping, and bulk rename are coming to <strong>WebPIQ Pro</strong>.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="pro-teaser">
+  <div class="wrap">
+    <h2>Coming soon: WebPIQ Pro</h2>
+    <div class="pro-grid">
+      <div class="pro-card">
+        <h3>Unlimited batches</h3>
+        <p>Process 500+ images at once, powered by web workers so the tab never freezes.</p>
+      </div>
+      <div class="pro-card">
+        <h3>Marketplace presets</h3>
+        <p>One-click sizing for Etsy, Shopify, eBay, Poshmark, Vinted, Mercari, Amazon, and Facebook Marketplace.</p>
+      </div>
+      <div class="pro-card">
+        <h3>Strip EXIF / GPS</h3>
+        <p>Don't post your home location in your listing photos.</p>
+      </div>
+      <div class="pro-card">
+        <h3>Bulk rename + ZIP folders</h3>
+        <p>Patterns like <code>{sku}-{n}</code> or a pasted list, with folder structure preserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>WebPIQ — built for resellers, store owners, and freelancers who need fast product photos. No images are ever uploaded to a server.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
