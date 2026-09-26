@@ -1,10 +1,10 @@
 :root {
-  --bg: #f8fafc;
-  --bg-elevated: #e2e8f0;
-  --bg-card: #ffffff;
-  --border: #cbd5e1;
-  --text: #0f172a;
-  --text-muted: #64748b;
+  --bg: #1e293b;
+  --bg-elevated: #334155;
+  --bg-card: #0f172a;
+  --border: #475569;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
   --accent: #30C476;
   --accent-strong: #249e5d;
   --accent-soft: rgba(48, 196, 118, 0.12);
@@ -36,7 +36,7 @@ html, body {
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
-  background: rgba(248, 250, 252, 0.85);
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(8px);
   z-index: 10;
 }
