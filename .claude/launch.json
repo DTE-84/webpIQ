@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "webpiq-static",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "5173"],
+      "name": "webpiq-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "5173"],
       "port": 5173
     }
   ]
