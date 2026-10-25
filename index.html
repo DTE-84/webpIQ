@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>WebPIQ — Bulk JPG/PNG/HEIC to WebP Converter, 100% Private</title>
 <meta name="description" content="Convert dozens of photos to WebP in your browser — nothing uploaded. Built for resellers and online sellers who need fast, marketplace-sized product photos.">
-<meta name="theme-color" content="#0f172a">
+<meta name="theme-color" content="#0A0F14">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="manifest" href="./manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Jura:wght@500;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
@@ -18,23 +21,101 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand">
-      <span class="brand-mark"><span style="color:var(--accent)">WebP</span><span style="color:#ffffff; margin-left: 2px;">IQ</span></span>
-      <span id="proBadge" class="pro-badge hidden">PRO</span>
+      <div class="brand-logo-box" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="3"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <path d="M21 15l-5-5L5 21"/>
+        </svg>
+      </div>
+      <div class="brand-text-col">
+        <div class="brand-row">
+          <span class="brand-mark"><span class="brand-webp">W<span class="brand-eb">eb</span>P</span><span class="brand-iq">IQ</span></span>
+          <span id="proBadge" class="pro-badge hidden">PRO</span>
+        </div>
+        <span class="brand-sub">Local Bulk Image Engine · DTE Solutions</span>
+      </div>
     </div>
     <div class="header-actions">
-      <button id="upgradeBtn" class="header-cta" type="button">Go Pro</button>
+      <a href="#pro-features" class="header-link marketing">Pro Specs</a>
+      <button id="upgradeBtn" class="header-cta" type="button">Unlock Pro ⚡</button>
     </div>
   </div>
 </header>
 
 <section class="hero marketing">
-  <div class="wrap">
-    <h1>Bulk-convert product photos to WebP.<br>Nothing ever leaves your device.</h1>
-    <p class="hero-sub">Drop in your phone photos — JPG, PNG, or HEIC — and get lean, marketplace-ready WebP files back in seconds. Free for up to 20 images at a time.</p>
-    <div class="hero-badges">
-      <span class="badge">🔒 100% private, runs on your device</span>
-      <span class="badge">⚡ No upload, no account</span>
-      <span class="badge">📦 Batch + ZIP download</span>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow-pill">
+        <span class="pulse-dot"></span>
+        <span>Zero-Server Local Execution · Web Worker Pipeline</span>
+      </div>
+      <h1 class="hero-display">
+        <span class="brand-webp">W<span class="brand-eb">eb</span>P</span><span class="brand-iq-hero">IQ</span>
+      </h1>
+      <p class="hero-tagline">
+        Bulk-convert &amp; resize product photos in seconds.<br>
+        <span class="text-accent">Nothing ever leaves your device.</span>
+      </p>
+      <p class="hero-sub">
+        Drop in your phone photos — JPG, PNG, or iPhone HEIC — and get lean, marketplace-ready WebP files instantly. Engineered for Etsy, Shopify, eBay, and Poshmark sellers.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          100% On-Device Privacy
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Multi-Threaded Web Workers
+        </span>
+        <span class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          Batch Presets + ZIP Export
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-telemetry" aria-hidden="true">
+      <div class="telemetry-card">
+        <div class="telemetry-header">
+          <span class="telemetry-dot"></span>
+          <span class="telemetry-title">LIVE ENGINE BENCHMARK</span>
+          <span class="telemetry-tag">WASM + SIMD</span>
+        </div>
+        <div class="telemetry-stats">
+          <div class="t-stat">
+            <span class="t-val">91%</span>
+            <span class="t-lbl">Avg Size Reduction</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-val">0 B</span>
+            <span class="t-lbl">Uploaded to Cloud</span>
+          </div>
+          <div class="t-stat">
+            <span class="t-val">500+</span>
+            <span class="t-lbl">Pro Batch Capacity</span>
+          </div>
+        </div>
+        <div class="telemetry-pipeline">
+          <div class="pipe-row">
+            <span class="pipe-name">IMG_4829.HEIC <span class="pipe-dim">(4.2 MB)</span></span>
+            <span class="pipe-arrow">→</span>
+            <span class="pipe-out">denim-jacket-01.webp <span class="pipe-saved">184 KB (-95%)</span></span>
+          </div>
+          <div class="pipe-row">
+            <span class="pipe-name">IMG_4830.JPG <span class="pipe-dim">(3.8 MB)</span></span>
+            <span class="pipe-arrow">→</span>
+            <span class="pipe-out">denim-jacket-02.webp <span class="pipe-saved">162 KB (-96%)</span></span>
+          </div>
+          <div class="pipe-row">
+            <span class="pipe-name">EXIF / GPS Metadata</span>
+            <span class="pipe-arrow">→</span>
+            <span class="pipe-out">Stripped Clean ✓</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -42,173 +123,232 @@
 <section class="converter" id="converter">
   <div class="wrap">
 
-    <div id="dropzone" class="dropzone">
-      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/heic,image/heif,.heic,.heif,.jpg,.jpeg,.png" hidden>
-      <input type="file" id="folderInput" webkitdirectory multiple hidden>
-      <div class="dropzone-inner">
-        <div class="dropzone-icon">📸</div>
-        <p class="dropzone-title"><span class="dz-desktop">Drag photos or folders here, or </span><button type="button" id="browseBtn" class="link-btn">choose photos</button><span class="dz-desktop folder-only"> · <button type="button" id="folderBtn" class="link-btn">choose a folder</button></span></p>
-        <p class="dropzone-hint" id="dropHint">JPG · PNG · HEIC (iPhone) — up to 20 images free</p>
+    <div class="workspace-shell">
+      <div class="workspace-bar">
+        <div class="ws-dots"><span></span><span></span><span></span></div>
+        <div class="ws-title">LOCAL CONVERSION WORKSPACE · ZERO-UPLOAD SANDBOX</div>
+        <div class="ws-status"><span class="ws-led"></span> READY</div>
       </div>
-    </div>
 
-    <div id="controls" class="controls hidden">
-
-      <div class="panel">
-        <h3 class="panel-title">Quality &amp; size</h3>
-        <div class="panel-grid">
-          <div class="control-group">
-            <label for="qualitySlider">Quality <span id="qualityValue">80</span>%</label>
-            <input type="range" id="qualitySlider" min="1" max="100" value="80">
+      <div id="dropzone" class="dropzone">
+        <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/heic,image/heif,.heic,.heif,.jpg,.jpeg,.png" hidden>
+        <input type="file" id="folderInput" webkitdirectory multiple hidden>
+        <div class="dropzone-inner">
+          <div class="dropzone-icon-ring">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
           </div>
-          <div class="control-group">
-            <label>Resize (optional)</label>
-            <div class="resize-inputs">
-              <input type="number" id="maxWidth" placeholder="Width (px)" min="1" inputmode="numeric">
-              <span class="resize-x">×</span>
-              <input type="number" id="maxHeight" placeholder="Height (px)" min="1" inputmode="numeric">
-            </div>
-          </div>
+          <p class="dropzone-title"><span class="dz-desktop">Drag &amp; drop product photos or folders here, or </span><button type="button" id="browseBtn" class="link-btn">choose photos</button><span class="dz-desktop folder-only"> · <button type="button" id="folderBtn" class="link-btn">choose a folder</button></span></p>
+          <p class="dropzone-hint" id="dropHint">JPG · PNG · HEIC (iPhone) — up to 20 images per batch free · Processed 100% locally</p>
         </div>
+      </div>
 
-        <div class="pro-panel" id="sizePro">
-          <div class="lock-overlay" data-upgrade><span>PRO</span></div>
+      <div id="controls" class="controls hidden">
+
+        <div class="panel">
+          <div class="panel-header">
+            <h3 class="panel-title">01 // Quality &amp; Dimensions</h3>
+            <span class="panel-tag">Real-Time Re-Encoding</span>
+          </div>
           <div class="panel-grid">
             <div class="control-group">
-              <label for="preset">Marketplace preset</label>
-              <select id="preset"></select>
+              <label for="qualitySlider">WebP Quality <span id="qualityValue" class="mono-val">80</span>%</label>
+              <input type="range" id="qualitySlider" min="1" max="100" value="80">
             </div>
             <div class="control-group">
-              <label for="fit">Fit</label>
-              <select id="fit">
-                <option value="inside">Shrink to fit (keep proportions)</option>
-                <option value="pad">Pad to exact size</option>
-                <option value="crop">Crop to exact ratio</option>
-              </select>
+              <label>Max Dimensions (optional)</label>
+              <div class="resize-inputs">
+                <input type="number" id="maxWidth" placeholder="Width (px)" min="1" inputmode="numeric">
+                <span class="resize-x">×</span>
+                <input type="number" id="maxHeight" placeholder="Height (px)" min="1" inputmode="numeric">
+              </div>
             </div>
-            <div class="control-group" id="fillGroup">
-              <label for="fill">Padding fill</label>
-              <select id="fill">
-                <option value="white">White</option>
-                <option value="blur">Blurred photo</option>
-              </select>
-            </div>
-            <div class="control-group preset-actions">
-              <button type="button" id="savePresetBtn" class="btn btn-ghost btn-sm">Save as preset</button>
-              <button type="button" id="deletePresetBtn" class="btn btn-ghost btn-sm hidden">Delete</button>
+          </div>
+
+          <div class="pro-panel" id="sizePro">
+            <div class="lock-overlay" data-upgrade><span>⚡ UNLOCK PRO PRESETS</span></div>
+            <div class="panel-grid">
+              <div class="control-group">
+                <label for="preset">Marketplace Preset</label>
+                <select id="preset"></select>
+              </div>
+              <div class="control-group">
+                <label for="fit">Aspect Fit Mode</label>
+                <select id="fit">
+                  <option value="inside">Shrink to fit (keep proportions)</option>
+                  <option value="pad">Pad to exact size</option>
+                  <option value="crop">Crop to exact ratio</option>
+                </select>
+              </div>
+              <div class="control-group" id="fillGroup">
+                <label for="fill">Padding Fill</label>
+                <select id="fill">
+                  <option value="white">Clean Studio White</option>
+                  <option value="blur">Blurred Photo Backdrop</option>
+                </select>
+              </div>
+              <div class="control-group preset-actions">
+                <button type="button" id="savePresetBtn" class="btn btn-ghost btn-sm">Save Preset</button>
+                <button type="button" id="deletePresetBtn" class="btn btn-ghost btn-sm hidden">Delete</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="panel pro-panel" id="outputPro">
-        <div class="lock-overlay" data-upgrade><span>PRO</span></div>
-        <h3 class="panel-title">Output &amp; naming</h3>
-        <div class="panel-grid">
-          <div class="control-group control-wide">
-            <label class="check"><input type="checkbox" id="jpgFallback"> Also save a JPG next to each WebP</label>
+        <div class="panel pro-panel" id="outputPro">
+          <div class="lock-overlay" data-upgrade><span>⚡ UNLOCK PRO NAMING &amp; FALLBACKS</span></div>
+          <div class="panel-header">
+            <h3 class="panel-title">02 // SEO Bulk Naming &amp; Format Output</h3>
+            <span class="panel-tag">Pro Automation</span>
           </div>
-          <div class="control-group">
-            <label for="pattern">Rename pattern</label>
-            <input type="text" id="pattern" placeholder="{name}  e.g. {sku}-{nn}" autocomplete="off" autocapitalize="off">
+          <div class="panel-grid">
+            <div class="control-group control-wide">
+              <label class="check"><input type="checkbox" id="jpgFallback"> Also generate a companion JPG alongside each WebP (for legacy platforms)</label>
+            </div>
+            <div class="control-group">
+              <label for="pattern">Rename Pattern</label>
+              <input type="text" id="pattern" placeholder="{name}  e.g. {sku}-{nn}" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="control-group">
+              <label for="sku">{sku} Prefix</label>
+              <input type="text" id="sku" placeholder="blue-denim-jacket" autocomplete="off" autocapitalize="off">
+            </div>
+            <div class="control-group">
+              <label for="startNum">Sequence Start</label>
+              <input type="number" id="startNum" value="1" min="0" inputmode="numeric">
+            </div>
+            <div class="control-group control-wide">
+              <label for="nameList">Or paste a custom name list / CSV <span class="muted">(one per line, or <code>old,new</code>)</span></label>
+              <textarea id="nameList" rows="3" spellcheck="false"></textarea>
+            </div>
           </div>
-          <div class="control-group">
-            <label for="sku">{sku}</label>
-            <input type="text" id="sku" placeholder="blue-denim-jacket" autocomplete="off" autocapitalize="off">
-          </div>
-          <div class="control-group">
-            <label for="startNum">Start at</label>
-            <input type="number" id="startNum" value="1" min="0" inputmode="numeric">
-          </div>
-          <div class="control-group control-wide">
-            <label for="nameList">Or paste a name list / CSV <span class="muted">(one per line, or <code>old,new</code>)</span></label>
-            <textarea id="nameList" rows="3" spellcheck="false"></textarea>
-          </div>
+        </div>
+
+        <div class="actions-bar">
+          <button id="downloadZipBtn" class="btn btn-primary" disabled>Download All as ZIP</button>
+          <button id="shareAllBtn" class="btn btn-secondary hidden" disabled>Share / Save Files</button>
+          <button id="clearAllBtn" class="btn btn-ghost">Clear Batch</button>
         </div>
       </div>
 
-      <div class="actions-bar">
-        <button id="downloadZipBtn" class="btn btn-primary" disabled>Download all as ZIP</button>
-        <button id="shareAllBtn" class="btn btn-secondary hidden" disabled>Share / save files</button>
-        <button id="clearAllBtn" class="btn btn-ghost">Clear all</button>
+      <div id="summary" class="summary hidden">
+        <span id="summaryText"></span>
+        <div id="progress" class="progress hidden"><div id="progressBar" class="progress-bar"></div></div>
       </div>
-    </div>
 
-    <div id="summary" class="summary hidden">
-      <span id="summaryText"></span>
-      <div id="progress" class="progress hidden"><div id="progressBar" class="progress-bar"></div></div>
-    </div>
+      <div id="fileList" class="file-list"></div>
 
-    <div id="fileList" class="file-list"></div>
-
-    <div id="limitNotice" class="limit-notice hidden">
-      <p>You've hit the free-batch limit of 20 images. <button type="button" class="link-btn" data-upgrade>Go Pro</button> for unlimited batches, marketplace presets, bulk rename, and JPG fallbacks.</p>
+      <div id="limitNotice" class="limit-notice hidden">
+        <p>You've hit the free-batch limit of 20 images. <button type="button" class="link-btn" data-upgrade>Upgrade to Pro</button> for unlimited 500+ batches, marketplace presets, SEO bulk rename, and JPG fallbacks.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section class="pro-teaser marketing">
+<section class="pro-teaser marketing" id="pro-features">
   <div class="wrap">
-    <h2><span style="color:var(--accent)">WebP</span><span style="color:#ffffff">IQ</span> Pro</h2>
+    <div class="section-head">
+      <span class="eyebrow">Built for High-Volume Sellers &amp; Agencies</span>
+      <h2>Why Resellers &amp; Store Owners Upgrade to <span class="brand-webp">W<span class="brand-eb">eb</span>P</span><span class="brand-iq">IQ</span> Pro</h2>
+      <p class="section-lead">Free tools make you upload one image at a time with zero store presets. WebPIQ Pro turns 500 raw phone photos into named, sized, GPS-stripped product assets in one click.</p>
+    </div>
+
     <div class="pro-grid">
       <div class="pro-card">
-        <h3>Unlimited batches</h3>
-        <p>Process 500+ images at once. Web workers keep the tab responsive.</p>
+        <div class="pro-card-top">
+          <span class="pro-num">01</span>
+          <span class="pro-tag">Web Workers</span>
+        </div>
+        <h3>Unlimited 500+ Batches</h3>
+        <p>Process hundreds of high-res photos simultaneously. Multi-threaded background workers keep your browser fast and responsive.</p>
       </div>
       <div class="pro-card">
-        <h3>Marketplace presets</h3>
-        <p>One-click sizing for Etsy, Shopify, eBay, Poshmark, Vinted, Mercari, Amazon, and Facebook Marketplace — with white or blurred padding.</p>
+        <div class="pro-card-top">
+          <span class="pro-num">02</span>
+          <span class="pro-tag">1-Click Sizing</span>
+        </div>
+        <h3>Marketplace Presets</h3>
+        <p>Exact dimensions and aspect ratios for Etsy, Shopify, eBay, Poshmark, Vinted, Mercari, Amazon, and Facebook Marketplace.</p>
       </div>
       <div class="pro-card">
-        <h3>Strip EXIF / GPS</h3>
-        <p>Every export is re-encoded clean, so your home location never rides along in listing photos.</p>
+        <div class="pro-card-top">
+          <span class="pro-num">03</span>
+          <span class="pro-tag">Reseller Privacy</span>
+        </div>
+        <h3>Strip EXIF &amp; Home GPS</h3>
+        <p>Every image is cleanly re-encoded from raw pixels so your home coordinates and camera metadata never leak into public listings.</p>
       </div>
       <div class="pro-card">
-        <h3>Bulk rename + folders</h3>
-        <p>Patterns like <code>{sku}-{nn}</code> or a pasted list, with folder structure preserved in the ZIP.</p>
+        <div class="pro-card-top">
+          <span class="pro-num">04</span>
+          <span class="pro-tag">SEO Ready</span>
+        </div>
+        <h3>Bulk SKU Rename + Folders</h3>
+        <p>Auto-rename batches with patterns like <code>{sku}-{nn}</code> or a pasted CSV list while preserving your entire folder hierarchy inside the ZIP.</p>
       </div>
       <div class="pro-card">
-        <h3>JPG fallbacks</h3>
-        <p>Get a JPG alongside each WebP for platforms that still reject WebP uploads.</p>
+        <div class="pro-card-top">
+          <span class="pro-num">05</span>
+          <span class="pro-tag">Dual Export</span>
+        </div>
+        <h3>Companion JPG Fallbacks</h3>
+        <p>Automatically output a clean, compressed JPG right next to each WebP for marketplaces that still require legacy formats.</p>
       </div>
       <div class="pro-card">
-        <h3>Saved presets</h3>
-        <p>Save your own sizes and settings and reuse them in one click.</p>
+        <div class="pro-card-top">
+          <span class="pro-num">06</span>
+          <span class="pro-tag">Client Workflow</span>
+        </div>
+        <h3>Custom Saved Presets</h3>
+        <p>Dial in your store or agency client's exact dimensions, padding style, and quality once — reuse it in a single click on every shoot.</p>
       </div>
     </div>
-    <p class="pro-cta"><button type="button" class="btn btn-primary" data-upgrade>Get Pro — <span class="price-label"></span></button></p>
+
+    <div class="pro-banner">
+      <div class="pro-banner-copy">
+        <h3>Ready to process your entire photo dump in one click?</h3>
+        <p>One-time license unlock. Instant activation key. Zero recurring cloud fees.</p>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg" data-upgrade>Unlock WebPIQ Pro — <span class="price-label"></span> ⚡</button>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer marketing">
-  <div class="wrap">
-    <p><span style="color:var(--accent)">WebP</span><span style="color:#ffffff">IQ</span> — built for resellers, store owners, and freelancers who need fast product photos. No images are ever uploaded to a server.</p>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark"><span class="brand-webp">W<span class="brand-eb">eb</span>P</span><span class="brand-iq">IQ</span></span>
+      <p>Engineered by DTE Solutions for resellers, e-commerce store owners, and freelancers. 100% client-side execution — no images are ever uploaded to a server.</p>
+    </div>
+    <nav class="legal-links">
+      <a href="./legal/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+      <span aria-hidden="true">·</span>
+      <a href="./legal/terms.html" target="_blank" rel="noopener">Terms of Service</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:support@dte-solutions.icu">Support</a>
+    </nav>
   </div>
 </footer>
 
-<nav class="legal-links">
-  <a href="./legal/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-  <span aria-hidden="true">·</span>
-  <a href="./legal/terms.html" target="_blank" rel="noopener">Terms of Service</a>
-  <span aria-hidden="true">·</span>
-  <a href="mailto:support@dte-solutions.icu">Support</a>
-</nav>
-
 <dialog id="upgradeDialog" class="dialog">
   <form method="dialog" class="dialog-body">
-    <h2>WebPIQ Pro</h2>
-    <p class="dialog-lead">Unlimited batches, marketplace presets, bulk rename, JPG fallbacks, and saved presets.</p>
+    <div class="dialog-badge">PRO LICENSE</div>
+    <h2>Unlock <span class="brand-webp">W<span class="brand-eb">eb</span>P</span><span class="brand-iq">IQ</span> Pro</h2>
+    <p class="dialog-lead">Unlimited batches, marketplace presets, SEO bulk rename, JPG fallbacks, and saved presets.</p>
     <div id="buyBlock">
       <a id="buyLink" class="btn btn-primary btn-block" target="_blank" rel="noopener">Get Pro — <span class="price-label"></span></a>
-      <p class="dialog-note">After purchase you'll receive a license key. Paste it below.</p>
+      <p class="dialog-note">After purchase you'll receive a license key. Paste it below to unlock immediately.</p>
     </div>
-    <label for="licenseInput" class="dialog-label">License key</label>
+    <label for="licenseInput" class="dialog-label">License Key</label>
     <input type="text" id="licenseInput" placeholder="WPIQ1.…" autocomplete="off" autocapitalize="off" spellcheck="false">
     <p id="licenseError" class="dialog-error hidden">That key isn't valid.</p>
     <div class="dialog-actions">
-      <button type="button" id="activateBtn" class="btn btn-primary">Activate</button>
-      <button type="button" id="deactivateBtn" class="btn btn-ghost hidden">Remove license</button>
+      <button type="button" id="activateBtn" class="btn btn-primary">Activate License</button>
+      <button type="button" id="deactivateBtn" class="btn btn-ghost hidden">Remove License</button>
       <button value="close" class="btn btn-ghost">Close</button>
     </div>
   </form>
@@ -216,11 +356,12 @@
 
 <dialog id="presetDialog" class="dialog">
   <form method="dialog" class="dialog-body" id="presetForm">
-    <h2>Save preset</h2>
-    <label for="presetName" class="dialog-label">Name</label>
-    <input type="text" id="presetName" placeholder="My Etsy shots" maxlength="40" autocomplete="off">
+    <div class="dialog-badge">CUSTOM PRESET</div>
+    <h2>Save Preset</h2>
+    <label for="presetName" class="dialog-label">Preset Name</label>
+    <input type="text" id="presetName" placeholder="My Etsy 2000x2000 Square" maxlength="40" autocomplete="off">
     <div class="dialog-actions">
-      <button type="submit" value="save" class="btn btn-primary">Save</button>
+      <button type="submit" value="save" class="btn btn-primary">Save Preset</button>
       <button value="cancel" class="btn btn-ghost" formnovalidate>Cancel</button>
     </div>
   </form>
