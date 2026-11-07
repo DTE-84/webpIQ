@@ -54,17 +54,15 @@ p { color: var(--gray); line-height: 1.75; }
 }
 
 /* ── WORDMARK ── */
+/* Shared DTE IQ-line wordmark: NAME in white, IQ in the app accent (RUNIQ, RESALEIQ) */
 .wordmark {
-  font-size: 1.55rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
-.wm-webp, .wm-iq {
-  font-family: 'Bebas Neue', 'Space Grotesk', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-.wm-webp { color: var(--green); }
-.wm-iq { color: var(--white); margin-left: 0.06em; }
+.wm-webp { color: var(--white); }
+.wm-iq { color: var(--green); }
 
 /* ── HEADER ── */
 .site-header {
@@ -787,7 +785,7 @@ code {
   gap: 16px;
   flex-wrap: wrap;
 }
-.footer-brand .wordmark { font-size: 1.3rem; }
+.footer-brand .wordmark { font-size: 1rem; }
 .footer-sub {
   font-size: 0.68rem;
   color: var(--gray2);
